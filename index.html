@@ -1,13 +1,467 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameCase Pro - O Gabinete Gamer Definitivo</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-desktop me-2"></i>GameCase Pro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#preco">Preço</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="hero-title">Unleash Your Gaming Potential</h1>
+                    <p class="hero-subtitle">Experience unparalleled performance with our cutting-edge design</p>
+                    <div class="hero-features mb-4">
+                        <div class="feature-item">
+                            <i class="fas fa-wind text-accent me-2"></i>
+                            <span>Airflow Otimizado</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-palette text-accent me-2"></i>
+                            <span>RGB Customizável</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt text-accent me-2"></i>
+                            <span>Construção Premium</span>
+                        </div>
+                    </div>
+                    <a href="#preco" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-shopping-cart me-2"></i>Comprar Agora
+                    </a>
+                    <a href="#sobre" class="btn btn-outline-light btn-lg">
+                        Saiba Mais
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="/placeholder.svg?height=500&width=400" alt="GameCase Pro" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="/placeholder.svg?height=400&width=500" alt="Interior do GameCase Pro" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">O Gabinete que Todo Gamer Merece</h2>
+                    <p class="lead">O GameCase Pro foi desenvolvido especialmente para gamers que não abrem mão de performance e estilo.</p>
+                    <p>Com design inovador e materiais de alta qualidade, nosso gabinete oferece:</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check text-primary me-2"></i>Sistema de refrigeração avançado</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Gerenciamento de cabos otimizado</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Painel lateral em vidro temperado</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Suporte para placas de vídeo de até 400mm</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Sistema RGB sincronizável</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+                    <p class="lead">Mais de 10.000 gamers já escolheram o GameCase Pro</p>
+                </div>
+            </div>
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p>"Incrível! A temperatura da minha GPU caiu 15°C depois que troquei para o GameCase Pro."</p>
+                                    <div class="testimonial-author">
+                                        <strong>João Silva</strong>
+                                        <small class="text-muted">Streamer</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p>"O design é simplesmente perfeito. O RGB fica lindo e a qualidade de construção é excepcional."</p>
+                                    <div class="testimonial-author">
+                                        <strong>Maria Santos</strong>
+                                        <small class="text-muted">Designer Gráfica</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p>"Montagem super fácil e o espaço interno é muito bem aproveitado. Recomendo!"</p>
+                                    <div class="testimonial-author">
+                                        <strong>Pedro Costa</strong>
+                                        <small class="text-muted">Gamer Profissional</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p>"Melhor investimento que fiz para o meu setup. A diferença na performance é notável."</p>
+                                    <div class="testimonial-author">
+                                        <strong>Ana Oliveira</strong>
+                                        <small class="text-muted">Content Creator</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p>"Atendimento excelente e produto de qualidade superior. Superou minhas expectativas!"</p>
+                                    <div class="testimonial-author">
+                                        <strong>Carlos Mendes</strong>
+                                        <small class="text-muted">Desenvolvedor</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p>"O gabinete mais bonito que já tive. A iluminação RGB é um show à parte!"</p>
+                                    <div class="testimonial-author">
+                                        <strong>Lucas Ferreira</strong>
+                                        <small class="text-muted">Estudante</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preço Section -->
+    <section id="preco" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Investimento</h2>
+                    <p class="lead">Qualidade premium por um preço justo</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <h3>GameCase Pro</h3>
+                            <div class="price">
+                                <span class="currency">R$</span>
+                                <span class="amount">899</span>
+                                <span class="period">,90</span>
+                            </div>
+                            <p class="price-description">Gabinete Gamer Premium</p>
+                        </div>
+                        <div class="price-features">
+                            <ul>
+                                <li><i class="fas fa-check text-primary me-2"></i>Painel lateral em vidro temperado</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Sistema RGB sincronizável</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>6 ventoinhas incluídas</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Suporte para GPU até 400mm</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Gerenciamento de cabos otimizado</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Garantia de 2 anos</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Frete grátis para todo Brasil</li>
+                            </ul>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contato" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-shopping-cart me-2"></i>Comprar Agora
+                            </a>
+                            <small class="text-muted mt-2 d-block">Parcelamento em até 12x sem juros</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p class="lead">Tire suas dúvidas ou faça seu pedido</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="contactForm" class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nome" class="form-label">Nome Completo</label>
+                                <input type="text" class="form-control" id="nome" name="nome" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Perguntas Frequentes</h2>
+                    <p class="lead">Esclarecemos as principais dúvidas</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Qual o prazo de entrega?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    O prazo de entrega varia de 3 a 7 dias úteis para todo o Brasil. Oferecemos frete grátis para compras acima de R$ 500.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    O gabinete vem com ventoinhas?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sim! O GameCase Pro vem com 6 ventoinhas RGB pré-instaladas (3 frontais e 3 traseiras) para garantir o melhor fluxo de ar.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Qual a garantia do produto?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Oferecemos 2 anos de garantia contra defeitos de fabricação. Além disso, você tem 7 dias para trocar ou devolver o produto.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Posso parcelar a compra?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sim! Aceitamos parcelamento em até 12x sem juros no cartão de crédito. Também aceitamos PIX com 5% de desconto.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    O RGB é compatível com qual software?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    O sistema RGB é compatível com os principais softwares do mercado: ASUS Aura Sync, MSI Mystic Light, Gigabyte RGB Fusion e Razer Chroma.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-desktop me-2"></i>GameCase Pro
+                    </h5>
+                    <p>O gabinete gamer que você precisa para levar seu setup ao próximo nível.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-light text-decoration-none">Início</a></li>
+                        <li><a href="#sobre" class="text-light text-decoration-none">Sobre</a></li>
+                        <li><a href="#preco" class="text-light text-decoration-none">Preço</a></li>
+                        <li><a href="#contato" class="text-light text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Suporte</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#faq" class="text-light text-decoration-none">FAQ</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Garantia</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Política de Troca</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="fw-bold mb-3">Contato</h6>
+                    <p class="mb-2">
+                        <i class="fas fa-envelope me-2"></i>
+                        contato@gamecasepro.com
+                    </p>
+                    <p class="mb-2">
+                        <i class="fas fa-phone me-2"></i>
+                        (11) 9999-9999
+                    </p>
+                    <p class="mb-0">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        São Paulo, SP
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 GameCase Pro. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Desenvolvido com <i class="fas fa-heart text-danger"></i> para gamers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
     <script type="module" src="/src/main.js"></script>
-  </body>
+</body>
 </html>

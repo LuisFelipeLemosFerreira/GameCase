@@ -1,5 +1,5 @@
 {
-  "name": "jp2025",
+  "name": "gabinete-gamer-landing",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.1.2"
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0"
   }
 }
